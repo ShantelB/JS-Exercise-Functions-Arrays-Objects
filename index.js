@@ -163,12 +163,16 @@ return fruit.indexOf ('apple');
  * the returned value should be: [ false, true, false, false, true, false ].
 */
 function isItAnApple(fruit) {
-  const healthy = [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ];
-  for (let healthy = 0 ; healthy.length < 6 ; healthy++);
-  if('apple' === 'apple'){
-    return true
-  } else {return false};
+  const healthy = []
+  for (let i = 0 ; i < fruit.length; i++){
+  if(fruit[i] === 'apple'){
+    healthy.push(true)
+   } else {healthy.push(false)};
+
+  }
+  return healthy
 }
+
 
 
 
@@ -255,11 +259,12 @@ function getLastCarInfo(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  const year = inventory.car_year;
-  for(i = 0 ; i < inventory.length ; i++){
-    
-    return year
+  const caryear = [];
+  for(let i = 0 ; i < inventory.length ; i++){
+    const toys = inventory[i]; 
+    caryear.push(toys.car_year)
   }
+  return caryear;
 }
 
 /**
